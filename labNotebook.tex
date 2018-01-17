@@ -30,15 +30,15 @@
 	\end{itemize}
 \item Lecture de la review de Mathieu
 \end{itemize}
-
-Comment la température ambiante influence la fermeture des feuilles? \\
+~\\
+\noindent Comment la température ambiante influence la fermeture des feuilles? \\
 Comment la fermeture des feuilles affecte la température de celles-ci ?
 
 \section{16 Jan 2018}
 \begin{itemize}
 \item Installation de Debian sur le PC
 \item Installation des logiciels importants sur le PC
-\item Mise en place de la première manip test pour la \textbf{nutation} : début à \textbf{15h52}, fin à \textbf{10h42} le 17 Jan 2018. Les données sont situées sur Alfred : \/mnt\/data\/manip\/Baptiste\/test\_16-01-2018
+\item Mise en place de la première manip test pour la \textbf{nutation} : début à \textbf{15h52}, fin à \textbf{10h42} le 17 Jan 2018. Les données sont situées sur Alfred : /mnt/data/manip/Baptiste/test\_16-01-2018
 \end{itemize}
 
 \section{17 Jan 2018}
@@ -46,7 +46,26 @@ Comment la fermeture des feuilles affecte la température de celles-ci ?
 \item Arrêt de la manip \textbf{test\_16-01-2018} à \textbf{10h42}
 \item Arrosage des plantes
 \item Récupération des données de la manip
-\item Début de travail sur les scripts d'analyse
+\item Création du film à partir des données de la manip (\textsc{Section}~\ref{film})
+\item Réalisation du script \textbf{analysisScript.py} qui, à partir de photos stockées dans un dossier, réalise la timeline d'une ligne de pixel et la converti en image binaire
 \end{itemize}
 
+Le lien pour la vidéo : \url{http://uptobox.com/5x80eimcd7xu}\\
+
+Le résultat du script \textbf{analysisScript.py} :\\
+\includegraphics[width = \linewidth]{imTLBWv1.jpg}
+
+
+\newpage
+\begin{center}
+{\Huge Protocoles}
+\end{center}
+\appendix
+
+\section{Creation du film à partir des images \label{film}}
+\begin{itemize}
+\item On utilise Thunar pour renommer nos fichier pour que leurs noms soient une suite numérotée ininterrompue (eg. 001.jpg, 002.jpg...)
+\item On utilise la commande \texttt{ffmpeg -framerate 40 -i \%03d.jpg -c:v libx264 -profile:v high -crf 20 -pix\_fmt yuv420p output.mp4}
+\end{itemize}
+Les fichiers à utiliser sont données par l'option \texttt{-i}, on peut changer le framerate (ici 40 images par secondes).
 \end{document}
