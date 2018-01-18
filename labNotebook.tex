@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{siunitx}
 \author{Baptiste Rouger}
 \title{Lab Notebook MSC}
 
@@ -21,14 +22,14 @@
 \section{15 Jan 2018}
 
 \begin{itemize}
-\item Début d'installation sur le PC
-\item Cassage de ArchLinux
-\item Rangement de la salle de manip et mise en place de la salle de manip
-	\begin{itemize}
-	\item Raccourcissement des plus longues barres de la cage qui gênaient.
-	\item Réorganisation de la salle
-	\end{itemize}
-\item Lecture de la review de Mathieu
+        \item Début d'installation sur le PC
+        \item Cassage de ArchLinux
+        \item Rangement de la salle de manip et mise en place de la salle de manip
+                \begin{itemize}
+                        \item Raccourcissement des plus longues barres de la cage qui gênaient.
+                        \item Réorganisation de la salle
+                \end{itemize}
+        \item Lecture de la review de Mathieu
 \end{itemize}
 ~\\
 \noindent Comment la température ambiante influence la fermeture des feuilles? \\
@@ -36,18 +37,18 @@ Comment la fermeture des feuilles affecte la température de celles-ci ?
 
 \section{16 Jan 2018}
 \begin{itemize}
-\item Installation de Debian sur le PC
-\item Installation des logiciels importants sur le PC
-\item Mise en place de la première manip test pour la \textbf{nutation} : début à \textbf{15h52}, fin à \textbf{10h42} le 17 Jan 2018. Les données sont situées sur Alfred : /mnt/data/manip/Baptiste/test\_16-01-2018
+        \item Installation de Debian sur le PC
+        \item Installation des logiciels importants sur le PC
+        \item Mise en place de la première manip test pour la \textbf{nutation} : début à \textbf{15h52}, fin à \textbf{10h42} le 17 Jan 2018. Les données sont situées sur Alfred : /mnt/data/manip/Baptiste/test\_16-01-2018. J'ai utilisé la plante "Abby" pour réaliser cette manip. Photo toutes les 90 secondes.
 \end{itemize}
 
 \section{17 Jan 2018}
 \begin{itemize}
-\item Arrêt de la manip \textbf{test\_16-01-2018} à \textbf{10h42}
-\item Arrosage des plantes
-\item Récupération des données de la manip
-\item Création du film à partir des données de la manip (\textsc{Section}~\ref{film})
-\item Réalisation du script \textbf{analysisScript.py} qui, à partir de photos stockées dans un dossier, réalise la timeline d'une ligne de pixel et la converti en image binaire
+        \item Arrêt de la manip \textbf{test\_16-01-2018} à \textbf{10h42}
+        \item Arrosage des plantes
+        \item Récupération des données de la manip
+        \item Création du film à partir des données de la manip (\textsc{Section}~\ref{film})
+        \item Réalisation du script \textbf{analysisScript.py} qui, à partir de photos stockées dans un dossier, réalise la timeline d'une ligne de pixel et la converti en image binaire
 \end{itemize}
 
 Le lien pour la vidéo : \url{http://uptobox.com/5x80eimcd7xu}\\
@@ -55,17 +56,32 @@ Le lien pour la vidéo : \url{http://uptobox.com/5x80eimcd7xu}\\
 Le résultat du script \textbf{analysisScript.py} :\\
 \includegraphics[width = \linewidth]{imTLBWv1.jpg}
 
+\section{18 Jan 2018}
+\begin{itemize}
+        \item Début d'une deuxième manip pour observer la nutation (sur un plus long terme). Début à environ 12h30 \textbf{(heure pc décalée ????)}. Il fait \SI{24.2}{\celsius} dans la pièce, 49\% d'humidité. On utilise la plante "Béa". Les numéro de protocole sont :
+                \begin{itemize}
+                        \item arduino : 21608
+                        \item photos : 21821
+                \end{itemize}
+
+\end{itemize}
+
+
+
+
+
+
 
 \newpage
 \begin{center}
-{\Huge Protocoles}
+        {\Huge Protocoles}
 \end{center}
 \appendix
 
 \section{Creation du film à partir des images \label{film}}
 \begin{itemize}
-\item On utilise Thunar pour renommer nos fichier pour que leurs noms soient une suite numérotée ininterrompue (eg. 001.jpg, 002.jpg...)
-\item On utilise la commande \texttt{ffmpeg -framerate 40 -i \%03d.jpg -c:v libx264 -profile:v high -crf 20 -pix\_fmt yuv420p output.mp4}
+        \item On utilise Thunar pour renommer nos fichier pour que leurs noms soient une suite numérotée ininterrompue (eg. 001.jpg, 002.jpg...)
+        \item On utilise la commande \texttt{ffmpeg -framerate 40 -i \%03d.jpg -c:v libx264 -profile:v high -crf 20 -pix\_fmt yuv420p output.mp4}
 \end{itemize}
 Les fichiers à utiliser sont données par l'option \texttt{-i}, on peut changer le framerate (ici 40 images par secondes).
 \end{document}
