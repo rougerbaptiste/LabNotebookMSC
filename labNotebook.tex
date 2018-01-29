@@ -46,7 +46,7 @@ Comment la fermeture des feuilles affecte la température de celles-ci?
         \item Arrêt de la manip \textbf{test\_16-01-2018} à \textbf{10h42}
         \item Arrosage des plantes
         \item Récupération des données de la manip
-        \item Création du film à partir des données de la manip (\textsc{Section}~\ref{film})
+        \item Création du film à partir des données de la manip (\textit{cf}\textsc{Protocole}~\ref{film})
         \item Réalisation du script \textbf{analysisScript.py} qui, à partir de photos stockées dans un dossier, réalise la timeline d'une ligne de pixel et la converti en image binaire
 \end{itemize}
 
@@ -77,6 +77,11 @@ Pour les scripts, je vais essayer de trouver la position du centre de la tige en
 
 J'ai modifié les scripts : je les ai séparé en deux : \texttt{TL.py} sert à créer l'image de la timeline, \texttt{Trajec.py} sert à récupérer la position moyenne de la tige. On peut entre les deux scripts retailler l'image.
 
+\section{29 Jan 2018}
+J'ai travaillé sur les scripts d'analyse de l'image, de récupération de la trajectoire et d'analyse en ondelette de ces trajectoires. J'ai découpé chaque étape et je les ai mises dans des scripts précédents qui prennent différents arguments (\textit{cf} \textsc{Protocole}~\ref{anaNut}).
+
+J'ai fini le robot arduino qui contrôle la température, l'humidité et les lampes. Je le teste pour la nuit.
+
 
 
 
@@ -88,9 +93,21 @@ J'ai modifié les scripts : je les ai séparé en deux : \texttt{TL.py} sert à 
 \appendix
 
 \section{Creation du film à partir des images\label{film}}
-\begin{itemize}
+\begin{enumerate}
         \item On utilise Thunar pour renommer nos fichier pour que leurs noms soient une suite numérotée ininterrompue (eg. 001.jpg, 002.jpg, etc)
         \item On utilise la commande \texttt{ffmpeg -framerate 40 -i \%03d.jpg -c:v libx264 -profile:v high -crf 20 -pix\_fmt yuv420p output.mp4}
-\end{itemize}
+\end{enumerate}
 Les fichiers à utiliser sont données par l'option \texttt{-i}, on peut changer le framerate (ici 40 images par secondes).
+
+\section{Analyse des images de la nutation\label{anaNut}}
+\begin{enumerate}
+    \item On a mis toutes les photos du film dans un dossier. On récupère le chemin d'accès à ce dossier.
+    \item On utilise la commande : \texttt{python 1-TL.py Path Line} avec \texttt{Path} est la localisation du dossier \texttt{Line} est la ligne de pixel à extraire des photos
+    \item Puis \texttt{python 2-Traj.py Path Picture dt} avec \texttt{Path} la localisation du dossier, \texttt{Picture} est le nom de l'image générée par \texttt{1-TL.py}, et \texttt{dt} est le temps entre chaque photo.
+    \item Enfin \texttt{python 3-WL.py Path CSV} avec \texttt{Path} la localisation du dossier, \texttt{CSV} le nom du fichier csv créé par \texttt{2-Trajec.py}
+\end{enumerate}
+
+
+
+
 \end{document}
