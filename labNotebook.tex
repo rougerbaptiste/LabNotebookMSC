@@ -12,6 +12,8 @@
 \author{Baptiste Rouger}
 \title{Lab Notebook MSC}
 
+\setcounter{secnumdepth}{0}
+
 \begin{document}
 \maketitle
 
@@ -88,6 +90,11 @@ Il y avait un problème dans le robot de contôle. J'ai dû modifier le code d'u
 
 J'ai remarqué que la lampe numéro 2 (au dessus de la cage) ne fonctionne plus.
 
+\section{31 Jan 2018}
+Le robot de contrôle était encore bugé. Il se trouve que les relais se bloquent parfois et restent en position de contact alors qu'ils devraient couper le courant. Cela n'arrive que quand on branche la grosse lampe. Peut-être tire-t-elle trop de courant pour notre carte de relais. Il faudra voir si la carte est théoriquement capable de supporter les intensités que nous lui faisons traverser.\\
+
+J'ai également retravaillé les codes d'analyse d'images. Ils sont toujours découpés en trois parties, mais maintenant on peut spécifier plusieurs lignes à \texttt{1-TL.py} pour éviter d'avoir à relancer le process des images trop de fois. Par ailleurs, j'utilise maintenant numpy.savetxt pour sauver la trajectoire en csv dans \texttt{2-Traj.py}, ainsi que numpy.loadtxt pour la charger dans \texttt{3-WL.py}. J'ai aussi nettoyé le code de tous les commentaires de débugage inutiles.
+
 
 
 
@@ -108,7 +115,7 @@ Les fichiers à utiliser sont données par l'option \texttt{-i}, on peut changer
 \section{Analyse des images de la nutation\label{anaNut}}
 \begin{enumerate}
     \item On a mis toutes les photos du film dans un dossier. On récupère le chemin d'accès à ce dossier.
-    \item On utilise la commande : \texttt{python 1-TL.py Path Line} avec \texttt{Path} est la localisation du dossier \texttt{Line} est la ligne de pixel à extraire des photos
+    \item On utilise la commande : \texttt{python 1-TL.py Path Lines} avec \texttt{Path} est la localisation du dossier \texttt{Line} est une suite de lignes de pixel à extraire des photos (e.g. 500,600,700 sans espace, séparés par des virgules)
     \item Puis \texttt{python 2-Traj.py Path Picture dt} avec \texttt{Path} la localisation du dossier, \texttt{Picture} est le nom de l'image générée par \texttt{1-TL.py}, et \texttt{dt} est le temps entre chaque photo.
     \item Enfin \texttt{python 3-WL.py Path CSV} avec \texttt{Path} la localisation du dossier, \texttt{CSV} le nom du fichier csv créé par \texttt{2-Trajec.py}
 \end{enumerate}
