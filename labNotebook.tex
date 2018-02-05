@@ -114,14 +114,14 @@ J'ai lancé une manip avec deux plantes : Béa et Clara. Début à 17h58. Il fai
 \section{Creation du film à partir des images\label{film}}
 \begin{enumerate}
         \item On utilise Thunar pour renommer nos fichier pour que leurs noms soient une suite numérotée ininterrompue (eg. 001.jpg, 002.jpg, etc)
-        \item On utilise la commande \texttt{ffmpeg -framerate 40 -i \%03d.jpg -c:v libx264 -profile:v high -crf 20 -pix\_fmt yuv420p output.mp4}
+        \item On utilise la commande \texttt{ffmpeg -framerate 40 -i \%04d.jpg -c:v libx264 -profile:v high -crf 20 -pix\_fmt yuv420p output.mp4}
 \end{enumerate}
 Les fichiers à utiliser sont données par l'option \texttt{-i}, on peut changer le framerate (ici 40 images par secondes).
 
 \section{Analyse des images de la nutation\label{anaNut}}
 \begin{enumerate}
     \item On a mis toutes les photos du film dans un dossier. On récupère le chemin d'accès à ce dossier.
-    \item On utilise la commande : \texttt{python 1-TL.py Path Lines} avec \texttt{Path} est la localisation du dossier \texttt{Line} est une suite de lignes de pixel à extraire des photos (e.g. 500,600,700 sans espace, séparés par des virgules)
+    \item On utilise la commande : \texttt{python 1-TL.py Path Width Lines} avec \texttt{Path} est la localisation du dossier, \texttt{Width} est la largeur des photos, et \texttt{Line} est une suite de lignes de pixel à extraire des photos (e.g. 500,600,700 sans espace, séparés par des virgules)
     \item Puis \texttt{python 2-Traj.py Path Picture dt} avec \texttt{Path} la localisation du dossier, \texttt{Picture} est le nom de l'image générée par \texttt{1-TL.py}, et \texttt{dt} est le temps entre chaque photo.
     \item Enfin \texttt{python 3-WL.py Path CSV} avec \texttt{Path} la localisation du dossier, \texttt{CSV} le nom du fichier csv créé par \texttt{2-Trajec.py}
 \end{enumerate}
