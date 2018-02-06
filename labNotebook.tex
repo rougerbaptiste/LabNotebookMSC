@@ -9,6 +9,7 @@
 \usepackage{hyperref}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{siunitx}
+\usepackage{multicol}
 \author{Baptiste Rouger}
 \title{Lab Notebook MSC}
 
@@ -101,6 +102,46 @@ On a réparé le robot, il fonctionne actuellement avec uniquement la lampe de j
 
 J'ai lancé une manip avec deux plantes : Béa et Clara. Début à 17h58. Il fait \SI{24}{\celsius}, la température est régulée par le robot. On a pas encore refait l'arduino chagé de capter la température, l'humidité et la luminosité, donc ces donénes ne seront pas présentes.
 
+\section{05 Fev 2018}
+Le robot a planté pendant la nuit, la tepérature ce matin dans la salle était de \SI{312}{\celsius}. De plus, on a une grosse chute de l'humidité (environ 30\%).\\
+
+La manip de Clara a bougé hors du cadre le 04 à partir de la photo 9h48. Je l'ai donc arrêtée ce matin vers 11h. J'ai lancé la conversion en film (elle ne semble pas avoir beaucoup bougé), ainsi que l'analyse d'image.\\
+
+J'ai refait le focus pour la manip avec Béa.\\
+
+Il me semble que l'on ne pourra pas utiliser plus d'un capteur de luminosité avec Arduino car celui ci se fixe dans des pins spéciaux (vers les 6 mâles groupés).\\
+
+On a aussi intallé le relai statique pour alimenter le nouveau chauffage, pour voir si ceux là fonctionnent mieux que les relais mécaniques.
+
+\section{06 Fev 2018}
+La température était trop faible dans la pièce ce matin. Il semble qu'il faille mettre le chauffage à fond car sinon il ne fonctionne pas tout le temps (à 4 il est souvent éteint alors qu'il est sensé être allumé). De plus, comme j'avais peut que cela ne régule pas bien, j'ai également remis le chauffage 2 minutes toutes les 5 minutes (2' chauffe, 3' repos) avec arrêt si la température est supérieure à \SI{24}{\celsius}.\\
+
+J'ai rempoté toutes les petites caramboles (18) dans de plus grands pots. J'ai mis au fond des pots une épaisseur de tissu pour éviter que la terre de bruyère ne s'en aille. Puis une couche de billes d'argile. Ensuite un mélange de billes d'argile et de terre de bruyère (environ un volume de billes pour 5-6 volumes de terre). Enfin, une couche de terre de bruyère seule. J'ai ajouté à chaque fois un peu de la terre du pot d'origine près des racines.\\ J'ai arrosé et complété la terre qui manquait. J'ai laissé un peu de terre de bruyère dans un pot dans la sale au cas où on ait besoin de compléter les pots à nouveau.\\
+Les nouvelles plantes s'appellent :
+
+\begin{multicols}{4}
+\begin{enumerate}
+        \item Athéna
+        \item Borée
+        \item Chloris
+        \item Déméter
+        \item Éos
+        \item Fortuna
+        \item Gaia
+        \item Hygie
+        \item Io
+        \item Jupiter
+        \item Khnoum
+        \item Léto
+        \item Maïa
+        \item Nyx
+        \item Ouranos
+        \item Pan
+        \item Qébahout
+        \item Rê
+\end{enumerate}
+\end{multicols}
+
 
 
 
@@ -120,10 +161,10 @@ Les fichiers à utiliser sont données par l'option \texttt{-i}, on peut changer
 
 \section{Analyse des images de la nutation\label{anaNut}}
 \begin{enumerate}
-    \item On a mis toutes les photos du film dans un dossier. On récupère le chemin d'accès à ce dossier.
-    \item On utilise la commande : \texttt{python 1-TL.py Path Width Lines} avec \texttt{Path} est la localisation du dossier, \texttt{Width} est la largeur des photos, et \texttt{Line} est une suite de lignes de pixel à extraire des photos (e.g. 500,600,700 sans espace, séparés par des virgules)
-    \item Puis \texttt{python 2-Traj.py Path Picture dt} avec \texttt{Path} la localisation du dossier, \texttt{Picture} est le nom de l'image générée par \texttt{1-TL.py}, et \texttt{dt} est le temps entre chaque photo.
-    \item Enfin \texttt{python 3-WL.py Path CSV} avec \texttt{Path} la localisation du dossier, \texttt{CSV} le nom du fichier csv créé par \texttt{2-Trajec.py}
+        \item On a mis toutes les photos du film dans un dossier. On récupère le chemin d'accès à ce dossier.
+        \item On utilise la commande : \texttt{python 1-TL.py Path Width Lines} avec \texttt{Path} est la localisation du dossier, \texttt{Width} est la largeur des photos, et \texttt{Line} est une suite de lignes de pixel à extraire des photos (e.g. 500,600,700 sans espace, séparés par des virgules)
+        \item Puis \texttt{python 2-Traj.py Path Picture dt} avec \texttt{Path} la localisation du dossier, \texttt{Picture} est le nom de l'image générée par \texttt{1-TL.py}, et \texttt{dt} est le temps entre chaque photo.
+        \item Enfin \texttt{python 3-WL.py Path CSV} avec \texttt{Path} la localisation du dossier, \texttt{CSV} le nom du fichier csv créé par \texttt{2-Trajec.py}
 \end{enumerate}
 
 
