@@ -9,7 +9,8 @@
 \contentsline {section}{30 Jan 2018}{3}{section*.9}
 \contentsline {section}{31 Jan 2018}{3}{section*.10}
 \contentsline {section}{01 Fev 2018}{4}{section*.11}
-\contentsline {section}{05 Fev 2018}{4}{section*.12}
-\contentsline {section}{06 Fev 2018}{4}{section*.13}
-\contentsline {section}{Creation du film \IeC {\`a} partir des images}{5}{section*.14}
-\contentsline {section}{Analyse des images de la nutation}{5}{section*.15}
+\contentsline {section}{02 Fev 2018}{4}{section*.12}
+\contentsline {section}{05 Fev 2018}{4}{section*.13}
+\contentsline {section}{06 Fev 2018}{4}{section*.14}
+\contentsline {section}{Creation du film \IeC {\`a} partir des images}{5}{section*.15}
+\contentsline {section}{Analyse des images de la nutation}{5}{section*.16}
