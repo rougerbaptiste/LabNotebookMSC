@@ -12,5 +12,6 @@
 \contentsline {section}{02 Fev 2018}{4}{section*.12}
 \contentsline {section}{05 Fev 2018}{4}{section*.13}
 \contentsline {section}{06 Fev 2018}{4}{section*.14}
-\contentsline {section}{Creation du film \IeC {\`a} partir des images}{5}{section*.15}
-\contentsline {section}{Analyse des images de la nutation}{5}{section*.16}
+\contentsline {section}{12 Fev 2018}{5}{section*.15}
+\contentsline {section}{Creation du film \IeC {\`a} partir des images}{6}{section*.16}
+\contentsline {section}{Analyse des images de la nutation}{6}{section*.17}
