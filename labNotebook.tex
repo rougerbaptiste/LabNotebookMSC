@@ -167,17 +167,14 @@ Il y a eu beaucoup de changements dnas les scripts d'analyse des images. Mainten
 \setcounter{secnumdepth}{1}
 
 \section{Creation du film à partir des images\label{film}}
-\begin{enumerate}
-    \item On utilise Thunar pour renommer nos fichier pour que leurs noms soient une suite numérotée ininterrompue (eg. 001.jpg, 002.jpg, etc)
-    \item On utilise la commande \texttt{ffmpeg -framerate 40 -i \%04d.jpg -c:v libx264 -profile:v high -crf 20 -pix\_fmt yuv420p output.mp4}
-\end{enumerate}
-Les fichiers à utiliser sont données par l'option \texttt{-i}, on peut changer le framerate (ici 40 images par secondes).
+On utilise la commande \texttt{mencoder "mf://*.jpg" -mf w=320:h=240:fps=12:type=jpeg -ovc lavc -o output.avi}
+
 
 \section{Analyse des images de la nutation\label{anaNut}}
 \begin{enumerate}
     \item On a mis toutes les photos du film dans un dossier. On récupère le chemin d'accès à ce dossier.
     \item On utilise la commande : \texttt{python 1-TL.py Path ReadEvery WindowScale XStart XStop SpacePic} avec \texttt{Path} est la localisation du dossier, \texttt{ReadEvery} est l'intervalle auquel on veut cliquer sur les photos pour sélectionner la ligne, \texttt{WindowScale} est un coefficient pour diminuer la taille de l'image affichée, \texttt{XStart} est le pixel à partir duquel on veut crop l'image, \texttt{XStop} est le pixel jusqu'auquel on veut crop l'image, et \texttt{SpacePic} est l'intervalle de temps entre les images.
-    \item Enfin \texttt{python 2-WL.py Path CSV} avec \texttt{Path} la localisation du dossier, \texttt{CSV} le nom du fichier csv créé par \texttt{2-Trajec.py}
+    \item Enfin \texttt{python 2-WL.py Path CSV Scale} avec \texttt{Path} la localisation du dossier, \texttt{CSV} le nom du fichier csv créé par \texttt{2-Trajec.py} et \texttt{Scale} la taille d'un pixel en cm.
 \end{enumerate}
 
 
