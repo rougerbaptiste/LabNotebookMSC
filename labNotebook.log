@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.1.16)  15 MAR 2018 13:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.1.16)  20 MAR 2018 10:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1179,13 +1179,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-<imTLBWv1.jpg, id=142, 4512.86pt x 756.8275pt>
+<imTLBWv1.jpg, id=147, 4512.86pt x 756.8275pt>
 File: imTLBWv1.jpg Graphic file (type jpg)
  <use imTLBWv1.jpg>
 Package pdftex.def Info: imTLBWv1.jpg used on input line 59.
 (pdftex.def)             Requested size: 483.69687pt x 81.11485pt.
 
-<schema_Arduino.png, id=143, 535.33333pt x 311.1625pt>
+<schema_Arduino.png, id=148, 535.33333pt x 311.1625pt>
 File: schema_Arduino.png Graphic file (type png)
 
 <use schema_Arduino.png>
@@ -1298,27 +1298,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
+
+ []
+
 [6]
-Overfull \hbox (43.51138pt too wide) in paragraph at lines 225--226
+Overfull \hbox (43.51138pt too wide) in paragraph at lines 232--233
 []\T1/cmr/m/n/10 On uti-lise la com-mande \T1/cmtt/m/n/10 mencoder "mf://*.jpg"
  -mf w=320:h=240:fps=12:type=jpeg -ovc lavc -o output.avi 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 245.
 [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 245.
  (./labNotebook.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 245.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 245.
 Package rerunfilecheck Info: File `labNotebook.out' has not changed.
-(rerunfilecheck)             Checksum: 6CB135E8667BB2A9713CE7DCF7D7A59C;1256.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
+(rerunfilecheck)             Checksum: 1C1E80BB9709409D63D7A6A87C8C0C28;1305.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 245.
  ) 
 Here is how much of TeX's memory you used:
- 17769 strings out of 493013
- 331421 string characters out of 6135682
+ 17771 strings out of 493013
+ 331445 string characters out of 6135682
  381048 words of memory out of 5000000
- 21093 multiletter control sequences out of 15000+600000
+ 21094 multiletter control sequences out of 15000+600000
  19863 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,6n,33p,10383b,855s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1334,10 +1339,10 @@ ype1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super
 share/texmf/fonts/type1/public/cm-super/sfrm2488.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sftt1000.pfb>
-Output written on labNotebook.pdf (7 pages, 301008 bytes).
+Output written on labNotebook.pdf (7 pages, 301115 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
- 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 270 PDF objects out of 1000 (max. 8388607)
+ 242 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 219 words of extra memory for PDF output out of 10000 (max. 10000000)
 
