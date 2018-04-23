@@ -1,0 +1,15 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\toctoc{}{\csname a:TocLink\endcsname{1}{x1-1}{}{\select@language{english}}}{}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{1}{x1-1}{}{\select@language{english}}}{}\relax 
+\doTocEntry\toclot{}{\csname a:TocLink\endcsname{1}{x1-1}{}{\select@language{english}}}{}\relax 
+\doTocEntry\tocnav{}{\csname a:TocLink\endcsname{1}{x1-1}{}{\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}}}{}\relax 
+\doTocEntry\tocnav{}{\csname a:TocLink\endcsname{1}{x1-1}{}{\headcommand {\beamer@framepages {1}{1}}}}{}\relax 
+\doTocEntry\toctoc{}{\csname a:TocLink\endcsname{1}{x1-2r1}{}{\beamer@sectionintoc {1}{Introduction}{2}{0}{1}}}{}\relax 
+\doTocEntry\tocnav{}{\csname a:TocLink\endcsname{1}{x1-2r1}{}{\headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}}}{}\relax 
+\doTocEntry\tocnav{}{\csname a:TocLink\endcsname{1}{x1-2r1}{}{\headcommand {\beamer@sectionpages {1}{1}}}}{}\relax 
+\doTocEntry\tocnav{}{\csname a:TocLink\endcsname{1}{x1-2r1}{}{\headcommand {\beamer@subsectionpages {1}{1}}}}{}\relax 
+\doTocEntry\toctoc{}{\csname a:TocLink\endcsname{1}{x1-3r1}{}{\beamer@subsectionintoc {1}{1}{Nutation movement}{2}{0}{1}}}{}\relax 
+\doTocEntry\tocnav{}{\csname a:TocLink\endcsname{1}{x1-3r1}{}{\headcommand {\beamer@subsectionentry {0}{1}{1}{2}{Nutation movement}}\headcommand {\beamer@subsectionpages {2}{1}}}}{}\relax 
+\doTocEntry\tocnav{}{\csname a:TocLink\endcsname{1}{x1-3r1}{}{\headcommand {\slideentry {1}{1}{1}{2/2}{Nutation movement}{0}}}}{}\relax 
+\doTocEntry\tocnav{}{\csname a:TocLink\endcsname{1}{x1-3r1}{}{\headcommand {\beamer@framepages {2}{2}}}}{}\relax 
+\par 
