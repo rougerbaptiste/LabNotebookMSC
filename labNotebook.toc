@@ -26,5 +26,10 @@
 \contentsline {section}{28 Mar 2018}{8}{section*.26}
 \contentsline {section}{03 Avril 2018}{8}{section*.27}
 \contentsline {section}{04 Avril 2018}{8}{section*.28}
-\contentsline {section}{\numberline {A}Creation du film \IeC {\`a} partir des images}{9}{appendix.A}
-\contentsline {section}{\numberline {B}Analyse des images de la nutation}{9}{appendix.B}
+\contentsline {section}{06 Avril 2018}{8}{section*.29}
+\contentsline {section}{11 Avril 2018}{8}{section*.30}
+\contentsline {section}{\numberline {A}Entretien de la salle de manip}{9}{appendix.A}
+\contentsline {section}{\numberline {B}Lancement d'une manip}{9}{appendix.B}
+\contentsline {section}{\numberline {C}Arr\IeC {\^e}t d'une manip}{9}{appendix.C}
+\contentsline {section}{\numberline {D}Creation du film \IeC {\`a} partir des images}{9}{appendix.D}
+\contentsline {section}{\numberline {E}Analyse des images de la nutation}{10}{appendix.E}

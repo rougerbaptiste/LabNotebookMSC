@@ -238,6 +238,13 @@ J'ai donc lancé une manip avec Gabrielle et Hélène à 11h16.\\
 J'ai remarqué que depuis la montée de température, les plantes qui avaient perdu leurs feuilles semblent revenir à la vie avec plusieurs petites feuilles sur les anciens bourgeons secondaires.\\
 D'autre part, j'ai l'impression que la nutation est plus rapide à cette température (en tout cas pour Gabrielle au début).
 
+\section{06 Avril 2018}
+J'ai arrêté la précédente manip. A noter que le flash externe n'a pas fonctionné sur cette manip (et la suivante). Quand on débranche celui-ci, les réglages sont perdus.\\
+
+J'ai relancé une manip avec 2 nouvelles plantes.
+
+\section{11 Avril 2018}
+Arrêt de la précédente manip. Finalisation des analyses des manips. Comme indiqué précédemment, le flash externe ne fonctionnait pas sur cette manip, une seule est donc analysable.
 
 
 \newpage
@@ -246,6 +253,54 @@ D'autre part, j'ai l'impression que la nutation est plus rapide à cette tempér
 \end{center}
 \appendix
 \setcounter{secnumdepth}{1}
+
+\section{Entretien de la salle de manip}
+\begin{itemize}
+\item Vérifier l'heure et les conditions de température et d'humidité de la salle sur la console de l'arduino.
+\item Arroser les plantes (30 mL à chacune. Cela dépend aussi de la température : à \SI{22}{\celsius} seulement 20 mL). Avant le week-end et au retour, j'avais pour habitude de doubler ce volume.
+\item Remplir l'humidificateur
+\end{itemize}
+
+\section{Lancement d'une manip}
+\begin{enumerate}
+\item Installation des plantes
+	\begin{enumerate}
+	\item Choisir des feuilles assez jeunes (une par plantes pour les voir grandir le plus en face possible)
+	\item Attacher en en faisant un parapluie les feuilles autour de la jeune feuille pour ne pas gêner l'installation du fond
+	\item Installer le fond bleu (celui qui renvoie le moins de lumière à l'heure actuelle) en faisant en sorte de ne pas toucher la jeune feuille. Le fond doit être idéalement à \SI{45}{\degree}
+	\end{enumerate}
+\item Installation des appareils photos
+	\begin{enumerate}
+	\item Régler l'orientation et la hauteur des appareils photo
+	\item Régler le zoom des appareils photo de sorte que le focus puisse être réajusté en fonction de la croissance de la plante
+	\item Régler le focus des appareils photo
+	\end{enumerate}
+\item Installation de l'enregistreur
+	\begin{enumerate}
+	\item Caler la plaque avec les sensors au niveau d'une potence qui soutient un fond pour que les mesures soient les plus proches possible des plantes.
+	\end{enumerate}
+\item Lancement des programmes PC
+	\begin{enumerate}
+	\item Créer un nouveau dossier
+	\item Copier \textit{ArdSense.ino}, \textit{main.py} et \textit{arduino\_HT.py} dans le dossier
+	\item Dans \textit{main.py}, modifier le chemin du nouveau dossier
+	\item Lancer le programme \texttt{\$ python arduino\_HT.py}
+	\item Lancer le programme \texttt{\$ python main.py}
+	\end{enumerate}
+\end{enumerate}
+
+\section{Arrêt d'une manip}
+\begin{itemize}
+\item Arrêt de l'enregistrement de température \& Co : Ctrl + C dans le terminal
+\item Arrêt du programme de prise d'image : 
+	\begin{enumerate}
+	\item \texttt{\$ htop}
+	\item F6, taper gphoto2
+	\item Sélectionner les lignes avec gphoto2 et les numéros des appareils photo (2 par appareil)
+	\item Appuyer sur F9 et confirmer avec Enter
+	\item Quitter htop avec Crtl + C
+	\end{enumerate}
+\end{itemize}
 
 \section{Creation du film à partir des images\label{film}}
 On utilise la commande \texttt{mencoder "mf://*.jpg" -mf w=320:h=240:fps=12:type=jpeg -ovc lavc -o output.avi}
